@@ -2,9 +2,9 @@ var MongoClient = require('mongodb').MongoClient
 
 var url = "mongodb://localhost/nodeDriver"
 
-var Operaciones = require{'./crud.js'}
+var Operaciones = require('./crud.js')
 
-MongoClient.connect(url.function(err,db){
+MongoClient.connect(url, function(err,db){
 	if(err)console.log(err)
 		console.log("conexion establecida con la base de datos")
 	Operaciones.InsertarRegistro(db, (error, result) =>{
@@ -13,3 +13,4 @@ MongoClient.connect(url.function(err,db){
 })
 
 //cambiar funcion insertar por EliminarRegistro funcion
+//...
